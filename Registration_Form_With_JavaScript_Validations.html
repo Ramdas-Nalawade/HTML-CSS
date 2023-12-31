@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateAge()
+        {
+            var age = document.getElementById("age").value;
+            if(age.contains("e"))
+            {
+                document.getElementById("errage").innerHTML="age cannot contain alphabet";
+                return false;
+            }
+            document.getElementById("errage").innerHTML="";
+            return true;
+        }
+
+        function validateGender()
+        {
+            var data = document.getElementsByName("gender");
+            for(var obj of data)
+            {
+                if(obj.checked)
+                {
+                    document.getElementById("errgender").innerHTML="";
+                    return true;
+                }
+            }
+            document.getElementById("errgender").innerHTML="Please select gender";
+            return false;
+        }
+
+        function validateDegree()
+        {
+            var data = document.getElementsByName("degree");
+            for(var obj of data)
+            {
+                if(obj.checked)
+                {
+                    document.getElementById("errdegree").innerHTML="";
+                    return true;
+                }
+            }
+            document.getElementById("errdegree").innerHTML="Please select one degree";
+            return false;
+        }
+
+        function validateHobbies()
+        {
+            var data = document.getElementsByName("hobbies");
+            var count = 0;
+            for(var obj of data)
+            {
+                if(obj.checked)
+                {
+                    count++;
+                    if(count >= 2)
+                    {
+                        document.getElementById.innerHTML="";
+                        return true;
+                    }
+                }
+            }
+            document.getElementById.innerHTML="Please select atleast 2 hobbies";
+            return false;
+        }
+
+        function validateCity()
+        {
+            var data = document.getElementById("city").selectedIndex;
+            if(data != 0)
+            {
+                document.getElementById("errcity").innerHTML="";
+                return true;
+            }
+            document.getElementById("errcity").innerHTML="Please select city";
+            return false;
+        }
+
+        function validate()
+        {
+            var flag = validateAge();
+            var flag1 = validateGender();
+            var flag2 = validateDegree();
+            var flag3 = validateHobbies();
+            var flag4 = validateCity();
+            return flag && flag1 && flag2 && flag3 && flag4;
+        }
+    </script>
+</head>
+<body>
+    <form action="return validate()">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name" required autofocus placeholder="Enter name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="em" id="em" required placeholder="Enter email"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" id="age" placeholder="Enter age"></td>
+                <td id="errage"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" id="address" cols="20" rows="10" placeholder="Enter address"></textarea></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dt" id="dt"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label></td>
+                <td id="errgender"></td>
+            </tr>
+            <tr>
+                <td>Degree:</td>
+                <td><input type="radio" name="degree" id="btech" value="btech">
+                <label for="btech">btech</label>
+                <input type="radio" name="degree" id="mtech" value="mtech">
+                <label for="mtech">mtech</label>
+                <input type="radio" name="degree" id="phd" value="phd">
+                <label for="phd">phd</label>    </td>
+                <td id="errdegree"></td>            
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td><input type="checkbox" name="hobbies" id="Reading" value="Reading">
+                <label for="Reading">Reading</label>
+                <input type="checkbox" name="hobbies" id="Biking" value="Biking">
+                <label for="Biking">Biking</label>
+                <input type="checkbox" name="hobbies" id="Trekking" value="Trekking">
+                <label for="Trekking">Trekking</label>  <br>
+                <input type="checkbox" name="hobbies" id="Dancing" value="Dancing">
+                <label for="Dancing">Dancing</label>
+                <input type="checkbox" name="hobbies" id="Eating" value="Eating">
+                <label for="Eating">Eating</label> 
+                <input type="checkbox" name="hobbies" id="Sleeping" value="Sleeping">
+                <label for="Sleeping">Sleeping</label>   </td>
+                <td id="errhobbies"></td>                            
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="test">--------select one--------</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" id="register" value="register" name="btn">Register me</button>
+                    <button type="reset" id="cancel" value="cancel" name="btn">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
