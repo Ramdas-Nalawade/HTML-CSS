@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        fieldset
+        {
+            width: 80%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Survey</title>
+</head>
+<body></body>
+    <form action="post">
+        <table >
+           <tr>            
+            <td>
+                <h2>Internet Usage Survey</h2>
+                <p>This survey is being conducted to help identify the Internet usage patterns of our Customers. <br>
+                    Please take a few moments to complete and submit this short form. Thank you for your cooperation.</p>  
+            </td>
+           </tr>
+           <tr>
+            <br>
+            <td>What type of Internet connection do you have ?</td>
+            <td>
+                <select name="speed" size="2">
+                    <option value="Dial-up">Dial-up</option>
+                    <option value="DSL">DSL</option>
+                    <option value="High Speed Cable">High Speed Cable</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br> <br>
+            </td>
+            
+           </tr>
+           <tr>
+                <td>What type of computer do you use most at home ?</td>
+                <td>
+                    <input type="radio" name="category" id="Desktop" value="Desktop">
+                    <label for="Desktop">Desktop</label>
+                    <input type="radio" name="category" id="Laptop" value="Laptop">
+                    <label for="Laptop">Laptop</label>
+                </td>
+                &nbsp;&nbsp;
+           </tr>
+           <tr>
+                <td>How would you describe your main reason for using Internet ?</td>
+                <td>
+                    <input type="radio" name="cause" id="work" value="work">
+                    <label for="work">To do work-related activities</label> <br>
+                    <input type="radio" name="cause" id="school" value="school">
+                    <label for="school">To do school-related activities</label> <br>
+                    <input type="radio" name="cause" id="ent" value="ent">
+                    <label for="ent">For entertainment purpose</label> <br>
+                    <input type="radio" name="cause" id="other" value="other">
+                    <label for="other">Other activities</label>
+                </td>
+                <br>
+           </tr>
+           <tr>
+                <td>
+                    <fieldset>
+                        <legend>Types of sites visited</legend>
+                        What types of web sites do you access most often ?<br>
+                        Check all that apply. <br>
+                        <input type="checkbox" name="self" id="self">
+                        <label for="self">Self Improvement</label> <br>
+                        <input type="checkbox" name="entertainment" id="entertainment">
+                        <label for="entertainment">Entertainment</label> <br>
+                        <input type="checkbox" name="n&s" id="n&s">
+                        <label for="n&s">News and Sports</label> <br>
+                        <input type="checkbox" name="ref" id="ref">
+                        <label for="ref">Reference</label> <br>
+                        <input type="checkbox" name="email" id="email">
+                        <label for="email">Email</label> <br>
+                    </fieldset>
+                </td>
+                <td>
+                    <br>
+                    <fieldset>
+                        <legend>Time spent using Internet</legend>
+                        During an average week, how long do you spend online ? <br>
+                        <br>
+                        <input type="radio" name="time" id="time" value="time">
+                        <label for="time">0-3 Hours</label> <br>
+                        <input type="radio" name="time" id="time2" value="time2">
+                        <label for="time2">4-6 Hours</label><br>
+                        <input type="radio" name="time" id="time3" value="time3">
+                        <label for="time3">7-10 Hours</label><br>
+                        <input type="radio" name="time" id="time4" value="time4">
+                        <label for="time4">11-14 Hours</label><br>
+                        <input type="radio" name="time" id="time5" value="time5">
+                        <label for="time5">15+ Hours</label><br>
+                    </fieldset>
+                    <br>
+                </td>
+           </tr>
+           <tr>
+                <td>
+                    please comment on your opinions concerning Internet privacy and safety: <br>
+                    <textarea name="comment" id="comment" cols="80" rows="7"></textarea>
+                </td>
+           </tr>
+           <tr>
+                <td>First Name:
+                    <input type="text" id="fname" name="fname" size="40">
+                </td>
+                <td>Last Name:
+                    <input type="text" id="lname" name="lname" size="40">
+                </td>
+           </tr>
+           <tr>
+            <td>Age: &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" id="age" name="age" size="10">
+            </td>
+            <td>Zip Code:&nbsp;&nbsp;
+                <input type="text" id="zip" name="zip" size="20">
+            </td>
+       </tr>
+       <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Click to Submit"><label for="submit"></label>&nbsp;
+                <input type="reset" value="Clear Form"><label for="clear"></label> 
+            </td>
+       </tr>
+        </table>
+    </form>
+</body>
+</html>
