@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: left;
+            background-color: rgb(163, 195, 239);
+            
+        }
+        th,td{
+            border-collapse: collapse;
+        }
+        h2{
+            text-decoration: underline;
+            text-decoration-color:grey;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Employee Form</h2>
+    <form action="get">
+        <table border="1" >
+            <tr>
+                <td>Name</td>
+                <td><input type="text", id="name", name="name" required autofocus></td>
+            </tr>
+            <tr>
+                <td>Employee Code</td>
+                <td><input type="text", id="code" name="code"></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>
+                    <input type="radio", name="category", id="Admin", value="Admin">
+                    <label for="Admin">ADMIN</label> <br>
+                    <input type="radio" , name="category", id="HR", value="HR">
+                    <label for="HR">HR</label><br>
+                    <input type="radio", name="category", id="Technical", value="Technical">
+                    <label for="Technical">TECHNICAL</label><br>
+                    <input type="radio", name="category", id="Accounts", value="Accounts">
+                    <label for="Accounts">ACCOUNTS</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Joining</td>
+                <td>
+                    <input type="date", name="doj" id="doj", value="doj">
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="address" id="address" cols="30" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>Training Programs Attended</td>
+                <td>
+                    <input type="checkbox" name="html" id="html" value="html">
+                    <label for="html">HTML/DHTML</label> <br>
+                    <input type="checkbox" name="JAVA" id="java" value="java">
+                    <label for="java">JAVA</label> <br>
+                    <input type="checkbox" name="CLIENT" id="client" value="client">
+                    <label for="client">CLIENT/SERVER</label> <br>
+                    <input type="checkbox" name=".NET" id=".net" value=".net">
+                    <label for=".net">.NET</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Training Programmes need to attend</td>
+                <td><select name="course" id="course">
+                    <option>------select one-----</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                </select></td>                
+            </tr>
+            <tr>
+                <td>Send the information at</td>
+                <td><a href="email">abc@gmail.com</a></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
