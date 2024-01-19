@@ -1,0 +1,21 @@
+table,td,th, tr
+{
+    border: 2px solid black;
+    background-color: 		#00bfff;
+    margin: 5px;
+    border-collapse: collapse;
+}
+#my
+{
+    text-align: center;
+    background-color: #ffff99;
+}
+h2
+{
+    color: red;
+}
+#sub,#reset
+{
+    border-radius: 5px;
+    background-color: grey;
+}
